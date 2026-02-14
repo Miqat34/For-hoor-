@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Hoor ❤️</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      background-color: #fdf6e3;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 100px;
+      transition: background-color 0.5s ease;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background-color: #cbd5e1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hoor will you be my Valentine? 💘</h1>
+
+  <button id="no" onmouseover="moveButton()">No 🥺</button>
+  <button id="yes" onclick="celebrate()">Yes 💖</button>
+
+  <script>
+    function moveButton() {
+      var button = document.getElementById("no");
+      button.style.position = "absolute";
+      button.style.top = Math.random() * 400 + "px";
+      button.style.left = Math.random() * 400 + "px";
+    }
+
+    function celebrate() {
+      document.body.style.backgroundColor = "#ffb6c1"; // يتحول لوردي
+      
+      confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+
+</body>
+</html>
